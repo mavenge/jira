@@ -4,21 +4,7 @@ const baseUrl = process.env.REACT_APP_API_URL;
 
 function Login() {
   const login = (params: { username: string; password: string }) => {
-    fetch(`${baseUrl}/login`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(params)
-    }).then(res => {
-      if(res.ok) {
-      }
-    })
-    // axios('/login', {
-    //   baseURL: `${baseUrl}`,
-    //   method: 'POST',
-    //   data: params,
-    // });
+    
   };
 
   const hanglerSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -38,7 +24,7 @@ function Login() {
         <label htmlFor='password'>密码</label>
         <input type='password' />
       </div>
-      <button type='submit'>登录</button>
+      <button type='submit'>注册</button>
     </form>
   );
 }
